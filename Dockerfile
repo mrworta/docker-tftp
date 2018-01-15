@@ -12,4 +12,4 @@ VOLUME /opt/tftp
 EXPOSE 69/udp
 
 WORKDIR /opt/tftp
-ENTRYPOINT ["/usr/sbin/in.tftpd", "-t", "0", "-p", "-m", "/etc/tftp.map", "-c", "-vvv", "--secure", "--foreground", "/opt/tftp"]
+ENTRYPOINT ["/usr/sbin/in.tftpd", "-t", "0", "-p", "-m", "/etc/tftp.map", "-c", "-vvv", "--username", "root", "--secure", "--foreground", "/opt/tftp"]
